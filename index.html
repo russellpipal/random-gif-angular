@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="gifApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Random GIFs with Angular</title>
+    <link href="stylesheet.css" type="stylesheet" />
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body ng-controller="GifController">
+    <input type="text" ng-model="searchText" />
+    <button ng-click="searchGif()">Search for images</button>
+    <br />
+    <button ng-click="addRandomGif()">Add a random GIF</button>
+    <br />
+    <button ng-click="removeAll()">Remove all</button>
+    <br />
+    <img ng-repeat="gif in gifList" ng-src="{{gif}}" />
+  </body>
+</html>
